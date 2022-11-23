@@ -26,25 +26,24 @@ export const Calculadora = styled.div`
 }
 `
 export const CaixaTitulo = styled.div`
-display: flex;
-justify-content: space-between;
-width: 16rem;
-padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 16rem;
+  padding: 10px;
 
-    h1{
+  h1{
     font-family: 'Mochiy Pop One', sans-serif;
     color: darkblue;
     text-shadow: 8px 8px 10px black;
     font-size: 1.3rem;
     text-transform: uppercase;
-    }
+  }
 
-    img{
+  img{
     width: 3rem;
     object-fit: contain;
-    }
+  }
 `
-
 export const CaixaValores = styled.div`
   box-shadow: 8px 8px 20px black;
   border-radius: 10px;
@@ -68,7 +67,6 @@ export const CaixaValores = styled.div`
     border: none;
   }
 `
-
 export const CaixaBtn = styled.div`
   box-shadow: 8px 8px 20px black;
   border-radius: 10px;
@@ -96,9 +94,7 @@ export const CaixaBtn = styled.div`
       color: white;
     }
 `
-
 export default class App extends Component{
-
   state = {
     n1: "" ,
     n2: "",
@@ -165,7 +161,7 @@ export default class App extends Component{
   render(){
     return(
       <Calculadora>
-        {/* <Header/> */}
+        <Header/>
 
         <CaixaTitulo>
                 <h1>Calculadora</h1>
@@ -184,11 +180,10 @@ export default class App extends Component{
           <button onClick={this.multiplicar}>*</button>
           <button onClick={this.limpar}>Limpar</button>
         </CaixaBtn>
+
         <h2>{this.state.resultado}</h2>
 
       </Calculadora>
     )
   }
 }
-
-//export default App;
